@@ -733,25 +733,28 @@ code,
 
   .floating-controls {
     left: 0.6rem;
-    right: 0.6rem;
-    top: auto;
-    bottom: 4.75rem;
-    transform: none;
+    right: auto;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
     --dock-button-size: 2.8rem;
-    width: auto;
+    width: var(--dock-button-size);
   }
 
   .floating-control-rail {
-    grid-auto-flow: column;
-    grid-auto-columns: var(--dock-button-size);
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-columns: initial;
+    grid-template-columns: 1fr;
   }
 
   .floating-control-panel {
-    left: 0;
-    top: auto;
-    bottom: calc(var(--dock-button-size) + var(--dock-gap));
-    transform: none;
-    width: min(100%, 420px);
-    max-height: min(50svh, 460px);
+    left: calc(var(--dock-button-size) + var(--dock-gap));
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    width: min(320px, calc(100vw - 5.4rem));
+    max-height: min(60svh, 460px);
   }
+}
 }
