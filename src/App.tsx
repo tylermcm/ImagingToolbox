@@ -61,8 +61,7 @@ function App() {
         <p className="eyebrow">Imaging Toolbox MVP</p>
         <h1>Astrophotography Framing</h1>
         <p className="subhead">
-          Resolve targets, tune equipment, and place a single reticle quickly on
-          mobile.
+          Plan your target, match your equipment, and preview your framing in advance.
         </p>
         {framing.statusMessage ? (
           <p className="status-message" role="status">
